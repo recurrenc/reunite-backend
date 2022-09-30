@@ -3,7 +3,6 @@ import "dotenv/config";
 import bodyParser from "body-parser";
 import compression from "compression";
 import cookieParser from "cookie-parser";
-import mongoose from "mongoose";
 import CreateDatabaseConnection from "./config/connectdb.js";
 
 const app = express();

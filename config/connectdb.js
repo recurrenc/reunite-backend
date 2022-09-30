@@ -1,13 +1,10 @@
 import mongoose from "mongoose";
+const MONGODB_URL = process.env.MONGODB_URL;
 const CreateDatabaseConnection = () => {
   try {
-    mongoose.connect(
-      "mongodb+srv://reunite:reunite@atlascluster.qprthmm.mongodb.net/?retryWrites=true&w=majority",
-      {},
-      () => {
-        console.log(`Database connected...`);
-      }
-    );
+    mongoose.connect(MONGODB_URL, {}, () => {
+      console.log(`Database connected...`);
+    });
   } catch (e) {
     console.log(e.message);
   }
